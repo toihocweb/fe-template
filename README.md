@@ -23,7 +23,7 @@ what i use..
 Install gulp-cli first (ignore it if you're already)
 
 ```sh
-$ npm i gulp-cli
+$ npm i -g gulp-cli
 ```
 
 Install the dependencies and devDependencies and start the server.
