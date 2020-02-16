@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.news {
+	width: 500px;
+	margin: 20px;
+	border: 1px solid #9e9e9e;
+}
+
+.news img {
+	width: 100%;
+}
+
+.news h2,
+.news p {
+	padding: 10px;
+}
+
+.mt-20 {
+	margin-top: 20px;
+}
+
+.bg-grey {
+	color: wheat;
+	background: grey;
+}
+
