@@ -1,0 +1,49 @@
+.header {
+    border-bottom: 1px solid #646464;
+    img {
+        width: 100px;
+    }
+    p {
+        font-size: 23px;
+    }
+    ul {
+        li {
+            margin-left: 20px;
+            font-size: 23px;
+        }
+    }
+    .active {
+        background: #646464;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+}
+
+$width : 200px;
+$height: 200px;
+
+.squares {
+    .square {
+        width: $width;
+        height: $height;
+    }
+    .rectangle{
+        width: $width ;
+        height: $height + 80;
+    }
+    .s-rectangle{
+        width: $width+40 ;
+        height: $height + 60;
+    }
+}
+
+.red {
+background: red;
+}
+.blue {
+    background: #03A9F4;
+}
+.green{
+    background: #4CAF50;
+}

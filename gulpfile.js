@@ -17,14 +17,6 @@ const imagemin = require("gulp-imagemin");
 gulp.task("scss", function() {
   return gulp
     .src(["src/scss/**/*.scss"])
-    .pipe(
-      plumber({
-        handleError: function(err) {
-          console.log(err);
-          this.emit("end");
-        }
-      })
-    )
     .pipe(sass())
     .pipe(autoPrefixer())
     .pipe(cssComb())

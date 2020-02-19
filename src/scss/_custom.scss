@@ -1,0 +1,24 @@
+.flex { 
+    display: flex;
+}
+
+
+.j-between {
+    justify-content: space-between;
+}
+
+.j-end {
+    justify-content:flex-end;
+}
+
+.j-start {
+    justify-content:flex-start;
+}
+
+.a-center {
+    align-items: center;
+}
+
+.ml-200 {
+    margin-left: 200px;
+}
