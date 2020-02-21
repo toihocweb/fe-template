@@ -3,8 +3,13 @@
 	padding: 0;
 }
 
-ul {
+ul,
+ol {
 	list-style: none;
+}
+
+a {
+	text-decoration: none;
 }
 
 .flex {
@@ -104,5 +109,41 @@ ul {
 
 .green {
 	background: #4caf50;
+}
+
+footer.bt3 {
+	width: 700px;
+	padding: 20px;
+	background: #111;
+}
+
+footer.bt3 h2 {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	color: white;
+	border-bottom: 1px solid #666;
+}
+
+footer.bt3 p,
+footer.bt3 a {
+	color: #666;
+}
+
+footer.bt3 ul li {
+	margin-bottom: 10px;
+}
+
+footer.bt3 .about {
+	width: 60%;
+	margin-right: 20px;
+}
+
+footer.bt3 .links {
+	width: 40%;
+}
+
+section {
+	margin-top: 30px;
+	text-align: center;
 }
 

@@ -1,0 +1,29 @@
+footer.bt3 {
+    width: 700px;
+    background: #111;
+    padding: 20px;
+    h2 {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #666;
+        color: white;
+        margin-bottom: 20px;
+    }
+    p,a {
+        color: #666;
+    }
+    ul li {
+        margin-bottom: 10px;
+    }
+    .about {
+        width: 60%;
+        margin-right: 20px;
+    }
+    .links {
+        width: 40%;
+    }
+}
+
+section {
+    margin-top: 30px;
+    text-align: center;
+}
