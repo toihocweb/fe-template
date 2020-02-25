@@ -9,22 +9,14 @@ const cssComb = require("gulp-csscomb");
 const cmq = require("gulp-merge-media-queries");
 const cleanCss = require("gulp-clean-css");
 const uglify = require("gulp-uglify");
-  browserSync = require("browser-sync").create(),
+browserSync = require("browser-sync").create(),
   reload = browserSync.reload;
 
 const imagemin = require("gulp-imagemin");
 
-gulp.task("scss", function() {
+gulp.task("scss", function () {
   return gulp
     .src(["src/scss/**/*.scss"])
-    .pipe(
-      plumber({
-        handleError: function(err) {
-          console.log(err);
-          this.emit("end");
-        }
-      })
-    )
     .pipe(sass())
     .pipe(autoPrefixer())
     .pipe(cssComb())
@@ -40,19 +32,19 @@ gulp.task("scss", function() {
 });
 
 
-gulp.task("image", function() {
+gulp.task("image", function () {
   gulp
     .src("src/img/*")
     .pipe(imagemin())
     .pipe(gulp.dest("dist/img"));
 });
 
-gulp.task("js", function() {
+gulp.task("js", function () {
   return gulp
     .src(["src/js/**/*.js"])
     .pipe(
       plumber({
-        handleError: function(err) {
+        handleError: function (err) {
           console.log(err);
           this.emit("end");
         }
@@ -67,12 +59,12 @@ gulp.task("js", function() {
     .pipe(uglify())
     .pipe(gulp.dest("dist/js"));
 });
-gulp.task("html", function() {
+gulp.task("html", function () {
   gulp
     .src(["*.html"])
     .pipe(
       plumber({
-        handleError: function(err) {
+        handleError: function (err) {
           console.log(err);
           this.emit("end");
         }
@@ -80,7 +72,7 @@ gulp.task("html", function() {
     )
     .pipe(gulp.dest("."));
 });
-gulp.task("serve", function() {
+gulp.task("serve", function () {
   // Serve files from the root of this project
   browserSync.init({
     server: {
