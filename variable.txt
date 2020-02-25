@@ -1,2 +1,0 @@
-$gutter: 10px;
-$col: 4;
