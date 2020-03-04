@@ -1,5 +1,93 @@
-@import 'reset';
-@import 'custom';
-@import 'bt1';
-@import 'bt2';
-@import 'bt3';
+@import "reset";
+
+.flex {
+  display: flex;
+}
+
+nav {
+  background: #333;
+  padding: 20px;
+  a {
+    color: white;
+  }
+  > ul {
+    > li {
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    li {
+      &:hover {
+        > ul.dropdown {
+          display: block;
+        }
+      }
+      position: relative;
+      ul.dropdown {
+        display: none;
+        position: absolute;
+        width: 250px;
+        background: white;
+
+        a {
+          color: #333;
+          padding: 8px 15px;
+          display: flex;
+          justify-content: space-between;
+          transition: all 0.5s;
+          &:hover {
+            color: white;
+            background: #333;
+          }
+        }
+        box-shadow: 0px 0px 5px 2px #333;
+        &-right {
+          top: 0;
+          right: -100%;
+        }
+        &-left {
+          top: 0;
+          left: -100%;
+        }
+      }
+    }
+  }
+}
+.acestor {
+  width: 300px;
+  height: 300px;
+  background: red;
+  position: relative;
+  .parent {
+    width: 100px;
+    height: 100px;
+    background: green;
+    position: relative;
+
+    .child {
+      width: 20px;
+      height: 20px;
+      background: black;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .child2 {
+      width: 10px;
+      height: 10px;
+      background: yellow;
+      //   position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  .child {
+    width: 20px;
+    height: 20px;
+    background: black;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
