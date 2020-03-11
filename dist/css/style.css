@@ -13,56 +13,99 @@ a {
 	text-decoration: none;
 }
 
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
+input {
+	border: none;
+	outline: none;
 }
 
-.products {
-	background: #eee;
+button {
+	border: none;
+	outline: none;
+	background: none;
 }
 
-.products .container .row {
+.flex {
 	display: flex;
-	margin-right: -5px;
-	margin-left: -5px;
 	flex-wrap: wrap;
 }
 
-.products .container .row .item {
-	width: 25%;
-	padding: 5px;
+.j-between {
+	justify-content: space-between;
 }
 
-.products .container .row .item img {
+.a-center {
+	align-items: center;
+}
+
+.modal {
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	display: flex;
 	width: 100%;
+	height: 100vh;
+	background: rgba(51, 51, 51, .4);
+	justify-content: center;
+	align-items: center;
 }
 
-.products .container .row .item-title a {
-	font-size: 17px;
-	font-weight: normal;
-	color: rgba(51, 51, 51, .8);
-}
-
-.products .container .row .item-content {
-	padding: 10px;
-	transition: box-shadow .9s;
+.modal-form {
+	width: 500px;
+	margin-top: -200px;
+	padding-bottom: 15px;
+	border-radius: 5px;
 	background: white;
+	box-shadow: 0 0 6px 2px rgba(51, 51, 51, .8);
 }
 
-.products .container .row .item-content:hover {
-	box-shadow: 0 0 10px -1px #333;
+.modal-form .form-container {
+	width: 95%;
+	margin: 0 auto;
 }
 
-.products .container .row .item-price span {
-	font-size: 12px;
-	font-weight: normal;
-	color: rgba(51, 51, 51, .6);
+.modal-form form .modal-header {
+	margin-bottom: 15px;
+	padding: 15px 0;
+	border-bottom: 1px solid rgba(51, 51, 51, .2);
 }
 
-.products .container .row .item-price-del {
-	font-weight: normal;
-	text-decoration: line-through;
-	color: rgba(51, 51, 51, .6);
+.modal-form form .modal-header span {
+	color: rgba(51, 51, 51, .2);
+}
+
+.modal-form form .modal-body .input-group {
+	margin-bottom: 15px;
+}
+
+.modal-form form .modal-body .input-group label.username,
+.modal-form form .modal-body .input-group label.password {
+	font-weight: bold;
+	display: inline-block;
+	margin-bottom: 6px;
+}
+
+.modal-form form .modal-body .input-group label.remember {
+	margin-left: 5px;
+}
+
+.modal-form form .modal-body .input-group input#username,
+.modal-form form .modal-body .input-group input#password {
+	display: block;
+	width: 100%;
+	padding: 7px;
+	border: 1px solid rgba(51, 51, 51, .2);
+	border-radius: 3px;
+}
+
+.modal-form form .modal-body .input-group input#username:focus,
+.modal-form form .modal-body .input-group input#password:focus {
+	border-color: aqua;
+}
+
+.modal-form form .modal-actions button {
+	padding: 8px 15px;
+	color: white;
+	border-radius: 3px;
+	background: orange;
 }
 

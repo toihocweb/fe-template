@@ -1,58 +1,72 @@
 @import 'reset';
 // @import 'flex';
 @import 'variables';
+@import 'custom';
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+$modal-form-space: 15px;
+$modal-primary-color: rgba(#333,0.2);
 
-.products {
-        background: #eee;
-
-    .container {
-        // background: #eee;
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            margin-left: -$gutter/2;
-            margin-right: -$gutter/2;
-            .item {
-                padding: $gutter/2;
-                width: 100%/$col;
-                img {
-                    width: 100%;
+.modal {
+    height: 100vh; // vh = view height
+    background: rgba(#333 , 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    top: 0;
+    &-form {
+        background: white;
+        width: 500px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 6px 2px rgba(#333,0.8);
+        padding-bottom: $modal-form-space;
+        margin-top: -200px;
+        .form-container {
+            width: 95%;
+            margin: 0 auto;
+        }
+        form {
+            .modal-header {
+                padding: $modal-form-space 0px;
+                border-bottom: 1px solid $modal-primary-color;
+                margin-bottom: $modal-form-space;
+                span {
+                    color: $modal-primary-color;
                 }
-                &-title {
-                    a {
-                        font-size: 17px;
-                        font-weight: normal;
-                        color: rgba(#333, 0.8);
+            }
+            .modal-body {
+                .input-group{
+                    margin-bottom: $modal-form-space;
+                    label.username,label.password {
+                        font-weight: bold;
+                        margin-bottom: 6px;
+                        display: inline-block;
+                    }
+                    label.remember {
+                        margin-left: 5px;
+                    }
+                    input#username,input#password {
+                        display: block;
+                        width: 100%;
+                        padding: 7px;
+                        border: 1px solid $modal-primary-color;
+                        border-radius: 3px;
+                        &:focus {
+                            border-color: aqua;
+                        }
                     }
                 }
-                &-content {
-                    transition: box-shadow 0.9s;
-                    background: white;
-                    padding: 10px;
-                    &:hover {
-                        box-shadow: 0px 0px 10px -1px #333;
-                    }
-                    // border: 1px solid #333;
-                }
-                &-price {
-                    span {
-                        font-weight: normal;
-                        font-size: 12px;
-                        color: rgba(#333, 0.6);
-                    }
-                   &-del {
-                    font-weight: normal;
-                    text-decoration: line-through;
-                    color: rgba(#333, 0.6);
-                } 
+            }
+            .modal-actions {
+                button {
+                    padding: 8px 15px;
+                    background: orange;
+                    color: white;
+                    border-radius: 3px;
                 }
             }
         }
-
     }
 }
