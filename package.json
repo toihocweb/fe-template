@@ -25,6 +25,7 @@
     "browser-sync": "^2.26.7"
   },
   "dependencies": {
-    "gulp-imagemin": "^6.0.0"
+    "gulp-imagemin": "^6.0.0",
+    "pm2": "^4.2.3"
   }
 }
