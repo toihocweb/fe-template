@@ -1,5 +1,5 @@
 #terminal {
-  width: 500px;
+  width: 800px;
   border: 1px solid #333;
   .terminal-header {
     background: white;
@@ -66,6 +66,7 @@
     }
   }
   .terminal-body {
+    overflow-y: scroll;
     padding-top: 10px;
     height: 400px;
     background: black;

@@ -11,7 +11,7 @@ input {
 }
 
 #terminal {
-	width: 500px;
+	width: 800px;
 	border: 1px solid #333;
 }
 
@@ -88,6 +88,7 @@ input {
 }
 
 #terminal .terminal-body {
+	overflow-y: scroll;
 	height: 400px;
 	padding-top: 10px;
 	background: black;
