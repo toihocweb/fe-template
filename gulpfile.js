@@ -9,22 +9,13 @@ const cssComb = require("gulp-csscomb");
 const cmq = require("gulp-merge-media-queries");
 const cleanCss = require("gulp-clean-css");
 const uglify = require("gulp-uglify");
-  browserSync = require("browser-sync").create(),
-  reload = browserSync.reload;
+(browserSync = require("browser-sync").create()), (reload = browserSync.reload);
 
 const imagemin = require("gulp-imagemin");
 
 gulp.task("scss", function() {
   return gulp
     .src(["src/scss/**/*.scss"])
-    .pipe(
-      plumber({
-        handleError: function(err) {
-          console.log(err);
-          this.emit("end");
-        }
-      })
-    )
     .pipe(sass())
     .pipe(autoPrefixer())
     .pipe(cssComb())
@@ -38,7 +29,6 @@ gulp.task("scss", function() {
     .pipe(cleanCss())
     .pipe(gulp.dest("dist/css"));
 });
-
 
 gulp.task("image", function() {
   gulp

@@ -1,0 +1,82 @@
+#terminal {
+  width: 500px;
+  border: 1px solid #333;
+  .terminal-header {
+    background: white;
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.5;
+    transition: all 0.3s;
+    $icon-size: 10px;
+    .title {
+      font-size: 14px;
+      img {
+        width: 13px;
+        margin-right: 10px;
+      }
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      margin-left: -20px;
+      transform: translateX(-25px);
+
+      span {
+        margin-left: 30px;
+        transition: all 0.4s;
+      }
+      .minimize {
+        width: $icon-size;
+        height: 1px;
+        background: #333;
+        display: inline-block;
+      }
+      .zoom {
+        width: $icon-size;
+        height: $icon-size;
+        border: 1px solid #333;
+      }
+      .close {
+        position: relative;
+        &:after {
+          content: "";
+          width: $icon-size;
+          height: 1px;
+          background: #333;
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: rotate(45deg) translateY(-50%);
+        }
+        &:before {
+          content: "";
+          width: $icon-size;
+          height: 1px;
+          background: #333;
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: rotate(-45deg) translateY(-50%);
+        }
+      }
+    }
+  }
+  .terminal-body {
+    padding-top: 10px;
+    height: 400px;
+    background: black;
+    p {
+      color: white;
+      font-size: 14px;
+    }
+    input {
+      color: white;
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+}
