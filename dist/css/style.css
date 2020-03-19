@@ -31,7 +31,7 @@ input {
 
 #terminal .terminal-header .title img {
 	width: 13px;
-	margin-right: 10px;
+	margin: 0 5px;
 }
 
 #terminal .terminal-header .actions {
