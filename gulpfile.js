@@ -8,8 +8,9 @@ require("es6-promise").polyfill();
 const cssComb = require("gulp-csscomb");
 const cmq = require("gulp-merge-media-queries");
 const cleanCss = require("gulp-clean-css");
-const uglify = require("gulp-uglify");
+// const uglify = require("gulp-uglify");
 (browserSync = require("browser-sync").create()), (reload = browserSync.reload);
+const uglify = require("gulp-uglify-es").default;
 
 const imagemin = require("gulp-imagemin");
 

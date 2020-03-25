@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "gulp-imagemin": "^6.0.0",
+    "gulp-uglify-es": "^2.0.0",
     "pm2": "^4.2.3"
   }
 }
