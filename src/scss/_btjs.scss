@@ -9,6 +9,9 @@ body {
 main {
   padding: 1.2rem;
   .card {
+    img {
+      max-width: 100%;
+    }
     p {
       margin-bottom: 5px;
       &.vd {

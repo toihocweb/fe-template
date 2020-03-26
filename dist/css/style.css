@@ -36,6 +36,10 @@ main .card {
 	box-shadow: 0 0 7px -1px rgba(0, 0, 0, .82);
 }
 
+main .card img {
+	max-width: 100%;
+}
+
 main .card p {
 	margin-bottom: 5px;
 }
