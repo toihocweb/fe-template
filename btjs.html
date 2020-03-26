@@ -8,7 +8,10 @@
       href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/a11y-dark.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
     <title>Bài Tập Js</title>
   </head>
   <body>
@@ -47,7 +50,30 @@
             </ul>
             </p>
         </div>
+        <div class="card">
+          <h3 class="question-number">Câu 4</h3>
+          <p>
+            Định nghĩa 1 function nhận 1 tham số là (array) có chức năng- in ra các số theo hình xoắn ốc như hình <br>
+
+          </p>
+          <img src="dist/img/spiral.PNG" alt="">
+          <p class="vd"><span>Ví dụ: </span>
+   
+              <pre><code class="javascript">const array = [[2,4,12,55],[66,65,3,3],[34,86,7,7],[44,32,75,4]]
+
+spiralPrint(array) //2 4 12 55 3 7 4 75 32 44 34 66 65 3 7 86
+</code></pre>
+   
+            </p>
+        </div>
       </div>
     </main>
   </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+});
+  </script>
 </html>
