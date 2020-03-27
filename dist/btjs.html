@@ -81,8 +81,35 @@ const case2 = [3,5,7,45,2] // ["ba","năm",7,"ba năm",2]</code>
           <p>
             Viết code đảo ngược 1 chuỗi cho sẵn <br>
           </p>
-          <p></p><pre><code style="text-align: left;" class="language-js">const str = "My name is Ken" // Ken is name My
-const str = "Im so good" // Good so Im</code></pre>
+          <p></p><pre><code class="language-js">const str = "My name is Ken" // Ken is name My
+const str = "Im so good" // good so Im</code></pre>
+        </div>
+        <div class="card">
+          <h3 class="question-number">Câu 7</h3>
+          <p>
+            Định nghĩa 1 function nhận 2 tham số là (rootString, subString) có chức năng- đếm số lần xuất hiện của subString trong rootString <br>
+          </p>
+          <pre><code class="language-js">const rootString = "my nam is david, i like david"
+const subString = "david"
+countSubstrings(rootString,subString) // 2
+</code></pre>
+        </div>
+        <div class="card">
+          <h3 class="question-number">Câu 8</h3>
+          <p>
+            Định nghĩa 1 function nhận 2 tham số là (str, num) có chức năng- truncate 1 đoạn văn bản với số lượng từ là num<br>
+          </p>
+          <pre><code class="language-js">
+/*
+* Nếu str có số lượng từ lớn hơn num thì sẽ lấy 10 từ đầu tiên cộng với dấu ba chấm (...)
+* Nếu str có số lượng từ nhỏ hơn num thì giữ nguyên str ban đầu
+*/
+const str1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi necessitatibus omnis amet sapiente soluta alias vero nulla numquam, veniam recusandae accusamus aliquam. Quos eius iste magni repellendus voluptatum pariatur esse."
+const str2 = "hello word"
+truncateString(str1,10) // Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi necessitatibus...
+truncateString(str2,10) // hello word
+truncateString(str2,1) // hello...
+</code></pre>
         </div>
       </div>
     </main>
