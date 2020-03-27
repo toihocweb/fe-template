@@ -11,6 +11,7 @@ const cleanCss = require("gulp-clean-css");
 // const uglify = require("gulp-uglify");
 (browserSync = require("browser-sync").create()), (reload = browserSync.reload);
 const uglify = require("gulp-uglify-es").default;
+const htmlmin = require("gulp-htmlmin");
 
 const imagemin = require("gulp-imagemin");
 
@@ -32,7 +33,7 @@ gulp.task("scss", function() {
 });
 
 gulp.task("image", function() {
-  gulp
+  return gulp
     .src("src/img/*")
     .pipe(imagemin())
     .pipe(gulp.dest("dist/img"));
@@ -59,17 +60,7 @@ gulp.task("js", function() {
     .pipe(gulp.dest("dist/js"));
 });
 gulp.task("html", function() {
-  gulp
-    .src(["*.html"])
-    .pipe(
-      plumber({
-        handleError: function(err) {
-          console.log(err);
-          this.emit("end");
-        }
-      })
-    )
-    .pipe(gulp.dest("."));
+  return gulp.src(["*.html"]).pipe(gulp.dest("dist/"));
 });
 gulp.task("serve", function() {
   // Serve files from the root of this project

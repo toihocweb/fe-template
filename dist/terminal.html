@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/css/style.min.css" />
+    <title>Terminal</title>
+  </head>
+  <body>
+    <div id="terminal">
+      <div class="terminal-header">
+        <span class="title"
+          ><img src="dist/img/git-for-windows.ico" alt="" /> Terminal:
+          /c/Users/Admin</span
+        >
+        <div class="actions">
+          <span class="minimize"></span>
+          <span class="zoom"></span>
+          <span class="close"></span>
+        </div>
+      </div>
+      <div class="terminal-body">
+        <p>
+          <span style="color: #00B000; margin-right: 10px;">Admin@NbAdmin</span
+          ><span style="color: #CD00CD; margin-right: 10px;">MINGW64</span
+          ><span style="color: #CDCD00;">~</span>
+        </p>
+        <p style="display: flex;">
+          <span style="margin-right: 4px;">$</span>
+
+          <input id="text" type="text" />
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.getElementById("terminal").addEventListener("click", () => {
+      document.getElementById("text").focus();
+    });
+    document.getElementById("text").addEventListener("focus", () => {
+      document.getElementsByClassName("terminal-header")[0].style.opacity = 1;
+    });
+    document.getElementById("text").addEventListener("blur", () => {
+      document.getElementsByClassName("terminal-header")[0].style.opacity = 0.5;
+    });
+  </script>
+</html>
