@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dist/css/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link rel="stylesheet"
-    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/a11y-dark.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/a11y-dark.min.css">
+    <script
+      src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
     <title>Bài Tập Js</title>
   </head>
+
   <body>
     <main>
       <div class="container">
@@ -38,8 +41,10 @@
           <p>
             Định nghĩa 1 function nhận 2 tham số là (n) có chức năng- kiểm tra 1
             số có phải là số chính phương hay không <br>
-            + nếu là số chính phương thì in ra true-number (number là căn bậc 2 của số chính phương)<br>
-            + nếu không là số chính phương thì in ra false-number nhỏ hơn và gần số chính phương nhất
+            + nếu là số chính phương thì in ra true-number (number là căn bậc 2
+            của số chính phương)<br>
+            + nếu không là số chính phương thì in ra false-number nhỏ hơn và gần
+            số chính phương nhất
           </p>
           <p class="vd"><span>Ví dụ: </span>
             <ul>
@@ -48,32 +53,48 @@
               <li>- squareNumber(25) => true - 5</li>
               <li>- squareNumber(26) => false - 5</li>
             </ul>
-            </p>
+          </p>
         </div>
+
         <div class="card">
           <h3 class="question-number">Câu 4</h3>
           <p>
-            Định nghĩa 1 function nhận 1 tham số là (array) có chức năng- in ra các số theo hình xoắn ốc như hình <br>
+            Định nghĩa 1 function nhận 1 tham số là (array) có chức năng- in ra
+            các số theo hình xoắn ốc như hình <br>
 
           </p>
           <img src="dist/img/spiral.PNG" alt="">
           <p class="vd"><span>Ví dụ: </span>
-   
-              <pre><code class="javascript">const array = [[2,4,12,55],[66,65,3,3],[34,86,7,7],[44,32,75,4]]
-
+            <pre><code class="javascript">const array = [[2,4,12,55],[66,65,3,3],[34,86,7,7],[44,32,75,4]]
 spiralPrint(array) //2 4 12 55 3 7 4 75 32 44 34 66 65 3 7 86
 </code></pre>
-   
-            </p>
+          </p>
+        </div>
+        <div class="card">
+          <h3 class="question-number">Câu 5</h3>
+          <pre>
+                <code class="javascript">
+/*---
+viết code in ra 1 array mới thoải mãn điều điện sau:
+1. nếu phần tử array chia hết cho 3 thì in ra chữ "ba"
+2. nếu phần tử array chia hết cho 5 thì in ra chữ "năm"
+3. nếu phần tử array chia hết cho 3 và 5 thì in ra chữ "ba năm"
+*/---
+
+const case1 = [1,3,5,7,9,15] //[1,"ba","năm",7,9,"ba năm"]
+const case2 = [3,5,7,45,2] //["ba","năm",7,"ba năm",2]
+
+</code>
+</pre>
         </div>
       </div>
     </main>
   </body>
   <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-  document.querySelectorAll('pre code').forEach((block) => {
-    hljs.highlightBlock(block);
+  document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelectorAll('pre code').forEach((block) => {
+      hljs.highlightBlock(block);
+    });
   });
-});
-  </script>
+</script>
 </html>
