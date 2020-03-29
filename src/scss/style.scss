@@ -2,8 +2,30 @@
 // @import "terminal";
 @import "btjs";
 
-.clickme {
+button {
+  padding: 12px;
   background: #333;
   color: white;
-  padding: 20px;
+}
+
+.modal {
+  height: 100%;
+  background: rgba(#333, 0.4);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: none;
+  &-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form {
+      input {
+        padding: 10px;
+        background: white;
+        border: 1px solid #333;
+      }
+    }
+  }
 }

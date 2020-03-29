@@ -11,7 +11,6 @@ const cleanCss = require("gulp-clean-css");
 // const uglify = require("gulp-uglify");
 (browserSync = require("browser-sync").create()), (reload = browserSync.reload);
 const uglify = require("gulp-uglify-es").default;
-const htmlmin = require("gulp-htmlmin");
 
 const imagemin = require("gulp-imagemin");
 
