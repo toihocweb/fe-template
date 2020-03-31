@@ -64,8 +64,7 @@ spiralPrint(array) //2 4 12 55 3 7 4 75 32 44 34 66 65 3 7 86
         </div>
         <div class="card">
           <h3 class="question-number">Câu 5</h3>
-          <pre><code class="language-js">
-/*---
+          <pre><code class="language-js">/*---
 viết code in ra 1 array mới thoải mãn điều điện sau:
 1. nếu phần tử array chia hết cho 3 thì in ra chữ "ba"
 2. nếu phần tử array chia hết cho 5 thì in ra chữ "năm"
@@ -99,8 +98,7 @@ countSubstrings(rootString,subString) // 2
           <p>
             Định nghĩa 1 function nhận 2 tham số là (str, num) có chức năng- truncate 1 đoạn văn bản với số lượng từ là num<br>
           </p>
-          <pre><code class="language-js">
-/*
+          <pre><code class="language-js">/*
 * Nếu str có số lượng từ lớn hơn num thì sẽ lấy num từ đầu tiên cộng với dấu ba chấm (...)
 * Nếu str có số lượng từ nhỏ hơn num thì giữ nguyên str ban đầu
 */
@@ -116,8 +114,7 @@ truncateString(str2,1) // hello...
           <p>
             Định nghĩa 1 function nhận 2 tham số là (array1, array2) có chức năng- Tìm số lượng phần tử khác biệt trong 2 mảng <br>
           </p>
-          <pre><code class="language-js">
-/*
+          <pre><code class="language-js">/*
 * cho 2 mảng có cùng số lượng phần tử
 * tìm số lượng các phần tử khác biệt của 2 mảng
 */
@@ -126,6 +123,89 @@ const arr2 = [2,3,7,4,5,6]
 const arr3 = [2,2,7,4,5,9]
 countDifferentItems(arr1 , arr2) // 3 (vị trí index có giá trị khác nhau là 0,1,2)
 countDifferentItems(arr2 , arr3) // 2 (vị trí index có giá trị khác nhau là 1,5)
+</code></pre>
+        </div>
+        <div class="card">
+          <h3 class="question-number">Câu 10</h3>
+
+          <pre><code class="language-js">/*
+* Loại bỏ các phần tử trùng trong mảng
+*/
+const arr1 = [1,2,3,6,5,6] // [1,2,3,6,5]
+const arr2 = [2,3,7,3,5,3] // [2,3,7,5]
+const arr3 = [55,2,7,4,55,9] // [55,2,7,4,9]
+</code></pre>
+        </div>
+        <div class="card">
+          <h3 class="question-number">Câu 11</h3>
+          <p>
+            Định nghĩa 1 function nhận 1 tham số là (array) có chức năng- Loại bỏ các object trùng của mảng <br>
+          </p>
+          <pre><code class="language-js">/*
+* Loại bỏ các object trùng trong mảng
+*/
+const arr1 = [
+  {name: "David" , age : 18}, 
+  {name: "Linda" , age : 25}, 
+  {name: "David" , age : "18"} // trùng với arr1[0]
+  {name: "Linda" , age : "25"} // trùng với arr1[1]
+  {name: "Kenny" , age : 22}
+  {name: "Linda" , age : "25"} // trùng với arr1[1]
+]
+
+const arr2 = [
+  {id: 1 , name : "Samsung"}, 
+  {id: 2 , name : "Sonny"}, 
+  {id: 3 , name : "Nokia"} 
+  {id: "3" , name : "Nokia"} // trùng với arr2[2]
+  {id: "4" , name : "Huawei"}
+  {id: 5 , name : "Xiaomi"}
+]
+
+removeDuplicate(arr1)
+/*
+newArray1 = [
+  {name: "David" , age : 18}, 
+  {name: "Linda" , age : 25},
+  {name: "Kenny" , age : 22}
+]
+*/
+
+removeDuplicate(arr2)
+/*
+newArray2 = [
+  {id: 1 , name : "Samsung"}, 
+  {id: 2 , name : "Sonny"}, 
+  {id: 3 , name : "Nokia"} 
+  {id: "4" , name : "Huawei"}
+  {id: 5 , name : "Xiaomi"}
+]
+*/
+
+</code></pre>
+        </div>
+        <div class="card">
+          <h3 class="question-number">Câu 12</h3>
+          <pre><code class="language-js">/*
+* Cho 2 mảng arr1 và arr2 
+* In ra các phần tử của mảng arr1 chia hết cho bất kì phần tử nào của arr2
+*/
+const arr1 = [1,3,9,10,15,24,34,23]
+const arr2 = [3,5]
+// expected: newArray = [3,9,10,15,24]
+</code></pre>
+        </div>
+        <div class="card">
+          <h3 class="question-number">Câu 13</h3>
+          <p>
+            Định nghĩa 1 function nhận 2 tham số là (n, number) có chức năng- In ra mảng gồm number phần tử không trùng từ 1->n <br>
+          </p>
+          <pre><code class="language-js">/*
+* In ra mảng number phần tử random không trùng từ 1 -> n
+*/
+const n = 20
+const number = 10
+getRandomNoDuplicates(n, number) // [1,5,8,1,7,11,15,19,4,10]
 </code></pre>
         </div>
       </div>
