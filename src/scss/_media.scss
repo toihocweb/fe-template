@@ -1,0 +1,35 @@
+// 320
+// 576
+// 768
+// 992
+// 1200
+
+@mixin rs-xs {
+  @media (min-width: 320px) {
+    @content;
+  }
+}
+
+@mixin rs-sm {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin rs-md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin rs-lg {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin rs-xl {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}

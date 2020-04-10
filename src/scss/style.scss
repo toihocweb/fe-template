@@ -1,31 +1,56 @@
 @import "reset";
-// @import "terminal";
-@import "btjs";
+@import "media";
 
-button {
-  padding: 12px;
-  background: #333;
-  color: white;
+// 320px
+// 576px
+// 768
+// 992
+// 1200
+
+// @mixin - @include
+@mixin markupText {
+  color: yellow;
+  background: red;
+  font-size: 50px;
 }
 
-.modal {
-  height: 100%;
-  background: rgba(#333, 0.4);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  display: none;
-  &-content {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    form {
-      input {
-        padding: 10px;
-        background: white;
-        border: 1px solid #333;
-      }
+// rs 1 image
+img {
+  max-width: 100%;
+}
+
+// em, rem
+// 1rem = 16px
+html,
+body {
+  @include rs-xs {
+    font-size: 13px;
+  }
+  @include rs-sm {
+    font-size: 14px;
+  }
+  @include rs-md {
+    font-size: 16px;
+  }
+}
+// root*
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  .col {
+    // width: 25%;
+    h2 {
+      font-size: 1.5rem;
+    }
+    @include rs-xs {
+      width: 100%;
+    }
+    @include rs-sm {
+      width: 50%;
+    }
+    @include rs-md {
+      width: 25%;
     }
   }
 }
