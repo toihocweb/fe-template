@@ -1,56 +1,21 @@
-@import "reset";
-@import "media";
+// "." đại diện cho class
+// "#" đại diện cho id
 
-// 320px
-// 576px
-// 768
-// 992
-// 1200
-
-// @mixin - @include
-@mixin markupText {
-  color: yellow;
-  background: red;
-  font-size: 50px;
+.news {
+    width: 500px; // set chieu dai
+    background-color: #333;
+    h2,p{
+        color: white;
+    }
+    .title {
+        font-size: 23px; 
+    }
+    .desc {
+        font-size: 30px;
+    }
+    .desc-dog {
+        font-size: 18px;
+        background-color: orange;
+    }
 }
 
-// rs 1 image
-img {
-  max-width: 100%;
-}
-
-// em, rem
-// 1rem = 16px
-html,
-body {
-  @include rs-xs {
-    font-size: 13px;
-  }
-  @include rs-sm {
-    font-size: 14px;
-  }
-  @include rs-md {
-    font-size: 16px;
-  }
-}
-// root*
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  .col {
-    // width: 25%;
-    h2 {
-      font-size: 1.5rem;
-    }
-    @include rs-xs {
-      width: 100%;
-    }
-    @include rs-sm {
-      width: 50%;
-    }
-    @include rs-md {
-      width: 25%;
-    }
-  }
-}
