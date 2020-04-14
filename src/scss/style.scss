@@ -1,21 +1,23 @@
-// "." đại diện cho class
-// "#" đại diện cho id
+// ctrl space
+@import "reset";
 
-.news {
-    width: 500px; // set chieu dai
-    background-color: #333;
-    h2,p{
-        color: white;
-    }
-    .title {
-        font-size: 23px; 
-    }
-    .desc {
-        font-size: 30px;
-    }
-    .desc-dog {
-        font-size: 18px;
-        background-color: orange;
-    }
+.flex {
+  display: flex;
 }
 
+.squares {
+  display: flex;
+  // justify-content : can bang noi dung cia pt con
+  justify-content: space-between;
+  align-items: center; // canh chinh cac pt con
+  .square {
+    width: 200px;
+    height: 200px;
+  }
+}
+.green {
+  background-color: green;
+}
+.red {
+  background-color: red;
+}

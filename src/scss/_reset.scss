@@ -1,22 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+// doi voi nhung the html,  khi khoi tao margin , padding...
 
-input {
-  background: none;
-  border: none;
-  outline: none;
-}
-button {
-  background: none;
-  border: none;
-  box-shadow: none;
-  outline: none;
-}
-
-ul,
-ol {
-  list-style: none;
+a {
+    text-decoration: none; // dung de trang tri text
+    color: #333;
 }
