@@ -1,6 +1,14 @@
 // doi voi nhung the html,  khi khoi tao margin , padding...
+* {
+  margin: 0;
+  padding: 0;
+}
 
 a {
-    text-decoration: none; // dung de trang tri text
-    color: #333;
+  text-decoration: none; // dung de trang tri text
+}
+
+ul,
+ol {
+  list-style: none;
 }

@@ -1,23 +1,38 @@
-// ctrl space
+// import files
 @import "reset";
 
-.flex {
+header {
   display: flex;
-}
-
-.squares {
-  display: flex;
-  // justify-content : can bang noi dung cia pt con
   justify-content: space-between;
-  align-items: center; // canh chinh cac pt con
-  .square {
-    width: 200px;
-    height: 200px;
+  align-items: center;
+  background: #333;
+  padding: 20px;
+  .logo {
+    a {
+      font-size: 28px;
+      color: white;
+    }
   }
-}
-.green {
-  background-color: green;
-}
-.red {
-  background-color: red;
+  nav {
+    ul {
+      display: flex;
+      li {
+          color:white;
+          margin-left: 40px;
+         a {
+          color: white;
+          font-size: 18px;
+          &:hover {
+            color: green;
+          }
+         }
+         &.line {
+          width: 2px;
+          height: 20px;
+          background: white;
+         }
+      }
+
+    }
+  }
 }
