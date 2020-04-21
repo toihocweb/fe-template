@@ -1,38 +1,41 @@
 // import files
 @import "reset";
 
-header {
+.products {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #333;
-  padding: 20px;
-  .logo {
-    a {
-      font-size: 28px;
-      color: white;
-    }
+  align-items: flex-start;
+}
+.item {
+  margin-right: 20px;
+  width: 300px;
+  background: rgba(#333, 0.3);
+  img {
+    width: 100%;
   }
-  nav {
-    ul {
-      display: flex;
-      li {
-          color:white;
-          margin-left: 40px;
-         a {
-          color: white;
-          font-size: 18px;
-          &:hover {
-            color: green;
-          }
-         }
-         &.line {
-          width: 2px;
-          height: 20px;
-          background: white;
-         }
+  &-content {
+    padding: 10px;
+    h2 {
+      font-size: 18px;
+    }
+    .price {
+      color: #e67e22;
+    }
+    .discount {
+      .root {
+        text-decoration: line-through;
       }
-
+    }
+    .review {
+      display: flex;
+      .stars {
+        span {
+          font-size: 13px;
+          color: orange;
+        }
+      }
+      .location {
+        margin-left: auto;
+      }
     }
   }
 }
