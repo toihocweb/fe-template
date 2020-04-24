@@ -1,0 +1,37 @@
+.acestor {
+  width: 300px;
+  height: 300px;
+  background: red;
+  position: relative;
+  .parent {
+    width: 100px;
+    height: 100px;
+    background: green;
+    position: relative;
+
+    .child {
+      width: 20px;
+      height: 20px;
+      background: black;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .child2 {
+      width: 10px;
+      height: 10px;
+      background: yellow;
+      //   position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  .child {
+    width: 20px;
+    height: 20px;
+    background: black;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
