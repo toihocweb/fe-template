@@ -1,37 +1,31 @@
 // import files
 @import "reset";
 
-.main {
-  display: flex;
-  width: 1000px;
-  height: 400px;
-  .item {
-    color: white;
-    width: 50%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &-content {
-      width: 80%;
-    }
-    .quote {
-      font-size: 30px;
-    }
-    .item-text {
-      margin: 20px 0px;
-      line-height: 30px;
-    }
-    h2 {
-      margin-bottom: 5px;
-    }
-    &.banner-left {
-      background: url(https://demo.w3layouts.com/demos_new/template_demo/22-01-2020/norm-demo_Free/265072663/web/images/test1.jpg)
-        no-repeat top center/cover;
-    }
-    &.banner-right {
-      background: url(https://demo.w3layouts.com/demos_new/template_demo/22-01-2020/norm-demo_Free/265072663/web/images/test2.jpg)
-        no-repeat top center/cover;
+.orange {
+  width: 300px;
+  height: 300px;
+  background: orange;
+  position: relative;
+  left: 300px;
+  top: 500px;
+  // top:
+  // left
+  // right
+  // bottom
+  .green {
+    width: 130px;
+    height: 130px;
+    background: green;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    .white {
+      width: 60px;
+      height: 60px;
+      background: white;
+      position: absolute;
+      bottom: 0;
+      right: 0;
     }
   }
 }
