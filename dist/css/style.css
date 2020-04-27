@@ -13,30 +13,45 @@ ol {
 	list-style: none;
 }
 
+.parent-orange {
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+}
+
 .orange {
 	position: relative;
-	top: 500px;
-	left: 300px;
 	width: 300px;
 	height: 300px;
 	background: orange;
 }
 
-.orange .green {
+.orange .white {
 	position: absolute;
-	right: 0;
-	bottom: 0;
-	width: 130px;
-	height: 130px;
-	background: green;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	transform: translateX(-50%);
+	background-color: white;
 }
 
-.orange .green .white {
+.orange .red {
 	position: absolute;
-	right: 0;
-	bottom: 0;
-	width: 60px;
-	height: 60px;
-	background: white;
+	top: 50%;
+	width: 100px;
+	height: 100px;
+	transform: translateY(-50%);
+	background-color: red;
+}
+
+.orange .green {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	transform: translate(-50%, -50%);
+	background-color: green;
 }
 
