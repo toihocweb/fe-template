@@ -2,35 +2,61 @@
 @import "reset";
 @import "flex";
 
-body {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.square {
-  width: 300px;
-  height: 300px;
-  border: 1px solid #333;
-  display: flex;
-  align-items: center;
-  .wrapper {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    span {
-      height: 1px;
+// tao after, before luon su dung content
 
-      background: red;
-      &.line1 {
-        flex-grow: 1;
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+nav {
+  > ul {
+    > li {
+      margin-right: 20px;
+      position: relative;
+      padding: 10px 0px;
+      &:hover {
+        > ul.dropdown {
+          display: flex;
+        }
       }
-      &.line2 {
-        flex-grow: 1;
+      > ul.dropdown {
+        display: none;
+        position: absolute;
+        background: #333;
+        width: 450px;
+        padding: 30px 10px;
+        transform: translate(-50%, 10px);
+        > li {
+          margin-right: 25px;
+          > ul {
+            > li {
+              > a {
+                transition: all 0.3s;
+                &:hover {
+                  transform: translateX(10px);
+                }
+              }
+            }
+          }
+        }
+        a {
+          color: white;
+          padding: 7px;
+        }
+        &:after {
+          position: absolute;
+          top: -5px;
+          left: 50%;
+          width: 16px;
+          height: 16px;
+          content: "";
+          transform: rotate(45deg);
+          background: #333;
+        }
       }
     }
-    h2 {
-      margin: 0px 10px;
+    a {
+      color: #333;
     }
   }
 }

@@ -14,6 +14,13 @@ ol {
 	list-style: none;
 }
 
+button,
+input {
+	border: none;
+	outline: none;
+	background: none;
+}
+
 .flex {
 	display: flex;
 }
@@ -26,41 +33,59 @@ ol {
 	justify-content: space-between;
 }
 
-body {
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+nav > ul > li {
+	position: relative;
+	margin-right: 20px;
+	padding: 10px 0;
+}
+
+nav > ul > li:hover > ul.dropdown {
 	display: flex;
-	height: 100vh;
-	align-items: center;
-	justify-content: center;
 }
 
-.square {
-	display: flex;
-	width: 300px;
-	height: 300px;
-	border: 1px solid #333;
-	align-items: center;
+nav > ul > li > ul.dropdown {
+	position: absolute;
+	display: none;
+	width: 450px;
+	padding: 30px 10px;
+	transform: translate(-50%, 10px);
+	background: #333;
 }
 
-.square .wrapper {
-	display: flex;
-	width: 100%;
-	align-items: center;
+nav > ul > li > ul.dropdown > li {
+	margin-right: 25px;
 }
 
-.square .wrapper span {
-	height: 1px;
-	background: red;
+nav > ul > li > ul.dropdown > li > ul > li > a {
+	transition: all .3s;
 }
 
-.square .wrapper span.line1 {
-	flex-grow: 1;
+nav > ul > li > ul.dropdown > li > ul > li > a:hover {
+	transform: translateX(10px);
 }
 
-.square .wrapper span.line2 {
-	flex-grow: 1;
+nav > ul > li > ul.dropdown a {
+	padding: 7px;
+	color: white;
 }
 
-.square .wrapper h2 {
-	margin: 0 10px;
+nav > ul > li > ul.dropdown:after {
+	position: absolute;
+	top: -5px;
+	left: 50%;
+	width: 16px;
+	height: 16px;
+	content: '';
+	transform: rotate(45deg);
+	background: #333;
+}
+
+nav > ul a {
+	color: #333;
 }
 
