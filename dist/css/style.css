@@ -29,63 +29,18 @@ input {
 	align-items: center;
 }
 
+.a-start {
+	align-items: flex-start;
+}
+
 .j-between {
 	justify-content: space-between;
 }
 
-.container {
-	max-width: 1000px;
-	margin: 0 auto;
-}
-
-nav > ul > li {
-	position: relative;
-	margin-right: 20px;
-	padding: 10px 0;
-}
-
-nav > ul > li:hover > ul.dropdown {
-	display: flex;
-}
-
-nav > ul > li > ul.dropdown {
-	position: absolute;
-	display: none;
-	width: 450px;
-	padding: 30px 10px;
-	transform: translate(-50%, 10px);
-	background: #333;
-}
-
-nav > ul > li > ul.dropdown > li {
-	margin-right: 25px;
-}
-
-nav > ul > li > ul.dropdown > li > ul > li > a {
-	transition: all .3s;
-}
-
-nav > ul > li > ul.dropdown > li > ul > li > a:hover {
-	transform: translateX(10px);
-}
-
-nav > ul > li > ul.dropdown a {
-	padding: 7px;
-	color: white;
-}
-
-nav > ul > li > ul.dropdown:after {
-	position: absolute;
-	top: -5px;
-	left: 50%;
-	width: 16px;
-	height: 16px;
-	content: '';
-	transform: rotate(45deg);
-	background: #333;
-}
-
-nav > ul a {
-	color: #333;
+.square {
+	width: 500px;
+	height: 500px;
+	padding: 40px;
+	background: red;
 }
 

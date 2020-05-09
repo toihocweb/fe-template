@@ -4,59 +4,9 @@
 
 // tao after, before luon su dung content
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-nav {
-  > ul {
-    > li {
-      margin-right: 20px;
-      position: relative;
-      padding: 10px 0px;
-      &:hover {
-        > ul.dropdown {
-          display: flex;
-        }
-      }
-      > ul.dropdown {
-        display: none;
-        position: absolute;
-        background: #333;
-        width: 450px;
-        padding: 30px 10px;
-        transform: translate(-50%, 10px);
-        > li {
-          margin-right: 25px;
-          > ul {
-            > li {
-              > a {
-                transition: all 0.3s;
-                &:hover {
-                  transform: translateX(10px);
-                }
-              }
-            }
-          }
-        }
-        a {
-          color: white;
-          padding: 7px;
-        }
-        &:after {
-          position: absolute;
-          top: -5px;
-          left: 50%;
-          width: 16px;
-          height: 16px;
-          content: "";
-          transform: rotate(45deg);
-          background: #333;
-        }
-      }
-    }
-    a {
-      color: #333;
-    }
-  }
+.square {
+  width: 500px;
+  height: 500px;
+  background: red;
+  padding: 40px;
 }
