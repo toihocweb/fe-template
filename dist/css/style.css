@@ -43,14 +43,15 @@ body {
 	align-items: flex-start;
 }
 
-.blue {
-	width: 100px;
-	height: 100px;
-	background: blue;
+.col-1 {
+	width: 20px;
 }
 
-.yellow {
-	width: 100px;
-	background: yellow;
+.col-2 {
+	width: 20px;
+}
+
+.col-3 {
+	width: 20px;
 }
 
