@@ -1,20 +1,7 @@
 // import files
 @import "reset";
-@import "flex";
+@import "grid";
 
-body {
-  display: flex;
-  align-items: flex-start;
-}
-
-.col-1 {
-  width: 20px;
-}
-
-.col-2 {
-  width: 20px;
-}
-
-.col-3 {
-  width: 20px;
+.item {
+  background: red;
 }

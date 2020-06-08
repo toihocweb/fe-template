@@ -1,0 +1,19 @@
+$cols: 16; // chia luoi thanh 12 cot
+$gutter: 8px;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gutter / 2;
+  margin-right: -$gutter / 2;
+
+  div[class^="col-"] {
+    padding: $gutter / 2;
+  }
+
+  @for $var from 1 through $cols {
+    .col-#{$var} {
+      width: (100% / $cols) * $var;
+    }
+  }
+}

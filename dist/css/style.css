@@ -22,36 +22,82 @@ select {
 	background: none;
 }
 
-.flex {
+.row {
 	display: flex;
+	margin-right: -4px;
+	margin-left: -4px;
+	flex-wrap: wrap;
 }
 
-.a-center {
-	align-items: center;
+.row div[class^='col-'] {
+	padding: 4px;
 }
 
-.a-start {
-	align-items: flex-start;
+.row .col-1 {
+	width: 6.25%;
 }
 
-.j-between {
-	justify-content: space-between;
+.row .col-2 {
+	width: 12.5%;
 }
 
-body {
-	display: flex;
-	align-items: flex-start;
+.row .col-3 {
+	width: 18.75%;
 }
 
-.col-1 {
-	width: 20px;
+.row .col-4 {
+	width: 25%;
 }
 
-.col-2 {
-	width: 20px;
+.row .col-5 {
+	width: 31.25%;
 }
 
-.col-3 {
-	width: 20px;
+.row .col-6 {
+	width: 37.5%;
+}
+
+.row .col-7 {
+	width: 43.75%;
+}
+
+.row .col-8 {
+	width: 50%;
+}
+
+.row .col-9 {
+	width: 56.25%;
+}
+
+.row .col-10 {
+	width: 62.5%;
+}
+
+.row .col-11 {
+	width: 68.75%;
+}
+
+.row .col-12 {
+	width: 75%;
+}
+
+.row .col-13 {
+	width: 81.25%;
+}
+
+.row .col-14 {
+	width: 87.5%;
+}
+
+.row .col-15 {
+	width: 93.75%;
+}
+
+.row .col-16 {
+	width: 100%;
+}
+
+.item {
+	background: red;
 }
 

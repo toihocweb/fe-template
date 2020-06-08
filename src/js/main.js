@@ -1,23 +1,60 @@
-// types: kiểu dữ liệu (kiểu dữ liệu động - dynamic type)
-// primitive type: number , boolean, string, null, undefine,
-// reference type: object, array, function
+const list = [
+  {
+    id: 1,
+    title: "Shopping",
+    isCompleted: false,
+  },
+  {
+    id: 2,
+    title: "Game",
+    isCompleted: true,
+  },
+  {
+    id: 3,
+    title: "Crush",
+    isCompleted: false,
+  },
+];
 
-// const , let , var
-// === : so sanh gia tri va kieu du lieu
-// == : so sanh gia tri
+renderHtml(list);
 
-// kiểm tra 1 số chẳn lẽ
-// var number = 11;
+let input = document.getElementsByClassName("todo-input")[0];
 
-//  return 1 so ngau nhien 0->1 (khong bao gom so 1)
-console.log(Math.random());
+document
+  .getElementsByClassName("btn-add")[0]
+  .addEventListener("click", function () {
+    // input , textarea , select - option
+    let todo_input = input.value;
+    const newTodo = {
+      id: 4,
+      title: todo_input,
+      isCompleted: false,
+    };
+    list.unshift(newTodo);
+    renderHtml(list);
+    input.value = "";
+  });
 
-console.log(Math.floor(4.7)); //lam tron xuong
-console.log(Math.round(4.6)); //lam tron den so gan nhat
-console.log(Math.ceil(4.1)); // lam tron len
+for (let i = 0; i < list.length; i++) {
+  let btn_delete = document.getElementsByClassName("btn-delete");
 
-// random 1 so tu nhien tu 0->10
-console.log(Math.ceil(Math.random() * 10));
-Math.floor(Math.random() * 11);
+  btn_delete[i].addEventListener("click", function (e) {
+    let id = parseInt(e.target.getAttribute("data-id"));
+    const idx = list.findIndex(function (val) {
+      return val.id === id;
+    });
+    list.splice(idx, 1);
+    console.log(list);
+    renderHtml(list);
+  });
+}
 
-Math.floor(Math.random() * 10 + 1);
+function renderHtml(array) {
+  document.getElementsByClassName("content")[0].innerHTML = "";
+  array.map(function (val) {
+    const content = val.isCompleted
+      ? `<li style="text-decoration: line-through">${val.title} <span class="btn-delete" data-id=${val.id}>DELETE</span> </li>`
+      : `<li>${val.title} <span  class="btn-delete" data-id=${val.id}>DELETE</span></li>`;
+    document.getElementsByClassName("content")[0].innerHTML += content;
+  });
+}
