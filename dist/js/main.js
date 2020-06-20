@@ -1,60 +1,102 @@
-const list = [
-  {
-    id: 1,
-    title: "Shopping",
-    isCompleted: false,
-  },
-  {
-    id: 2,
-    title: "Game",
-    isCompleted: true,
-  },
-  {
-    id: 3,
-    title: "Crush",
-    isCompleted: false,
-  },
-];
+$(function () {
+  const products = [
+    { id: 1, title: "ship nam", img: "item.jpg", price: 10, stock: 9 },
+    { id: 2, title: "ship nU", img: "item.jpg", price: 12, stock: 0 },
+    { id: 3, title: "trai caY", img: "item.jpg", price: 3, stock: 0 },
+    { id: 4, title: "Banh bao", img: "item.jpg", price: 5, stock: 2 },
+    { id: 5, title: "hai san", img: "item.jpg", price: 12, stock: 1 },
+    {
+      id: 6,
+      title: "This is a title 6",
+      img: "item.jpg",
+      price: 150,
+      stock: 6,
+    },
+    { id: 7, title: "This is a title 7", img: "item.jpg", price: 23, stock: 1 },
+  ];
 
-renderHtml(list);
+  renderProducts(products);
 
-let input = document.getElementsByClassName("todo-input")[0];
-
-document
-  .getElementsByClassName("btn-add")[0]
-  .addEventListener("click", function () {
-    // input , textarea , select - option
-    let todo_input = input.value;
-    const newTodo = {
-      id: 4,
-      title: todo_input,
-      isCompleted: false,
-    };
-    list.unshift(newTodo);
-    renderHtml(list);
-    input.value = "";
+  $("input.search").keyup(function (e) {
+    e.preventDefault();
+    // let currentVal = e.target.value
+    let currentVal = $(this).val();
+    const newSearchProducts = products.filter(function (val) {
+      return val.title.toLowerCase().includes(currentVal.toLowerCase());
+    });
+    emptyProducts();
+    renderProducts(newSearchProducts);
   });
 
-for (let i = 0; i < list.length; i++) {
-  let btn_delete = document.getElementsByClassName("btn-delete");
+  $("button.add").click(function (e) {
+    e.preventDefault();
+    const title = $(".title").val();
+    const img = $(".img").val();
+    const stock = $(".stock").val();
+    const price = $(".price").val();
+    const newItem = {
+      id: products.length + 1,
+      title,
+      img,
+      stock,
+      price,
+    };
+    products.push(newItem);
+    emptyProducts();
+    renderProducts(products);
+    resetInput();
+  });
 
-  btn_delete[i].addEventListener("click", function (e) {
-    let id = parseInt(e.target.getAttribute("data-id"));
-    const idx = list.findIndex(function (val) {
-      return val.id === id;
-    });
-    list.splice(idx, 1);
-    console.log(list);
-    renderHtml(list);
+  $("#filter").change(function (e) {
+    e.preventDefault();
+    emptyProducts();
+    renderProducts(filterProducts(products, $(this).val()));
+  });
+});
+
+function filterProducts(products, type) {
+  switch (type) {
+    case "greaterthan5":
+      return products.filter(function (item) {
+        return item.price > 5;
+      });
+
+    case "lesserthan5":
+      return products.filter(function (item) {
+        return item.price < 5;
+      });
+    case "equalto5":
+      return products.filter(function (item) {
+        return item.price === 5;
+      });
+
+    default:
+      return products;
+  }
+}
+
+function renderProducts(list) {
+  list.forEach(function (item) {
+    $(`<div class="col-md-3">
+    <div class="item">
+      <img src="/dist/img/${item.img}" alt="" />
+      <h2>${item.title}</h2>
+      <div class="flex j-between">
+        <span>$${item.price}</span>
+        <span>Stock: ${item.stock}</span>
+      </div>
+    </div>
+  </div>`).appendTo(".list");
   });
 }
 
-function renderHtml(array) {
-  document.getElementsByClassName("content")[0].innerHTML = "";
-  array.map(function (val) {
-    const content = val.isCompleted
-      ? `<li style="text-decoration: line-through">${val.title} <span class="btn-delete" data-id=${val.id}>DELETE</span> </li>`
-      : `<li>${val.title} <span  class="btn-delete" data-id=${val.id}>DELETE</span></li>`;
-    document.getElementsByClassName("content")[0].innerHTML += content;
-  });
+function emptyProducts() {
+  $(".list").empty();
+}
+
+function resetInput() {
+  $(".title").val("");
+  $(".img").val("");
+  $(".stock").val("");
+  $(".price").val("");
 }
