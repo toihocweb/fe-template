@@ -17,15 +17,37 @@ $(function () {
 
   renderProducts(products);
 
+  //suggestion
+
   $("input.search").keyup(function (e) {
     e.preventDefault();
-    // let currentVal = e.target.value
+
     let currentVal = $(this).val();
     const newSearchProducts = products.filter(function (val) {
       return val.title.toLowerCase().includes(currentVal.toLowerCase());
     });
-    emptyProducts();
-    renderProducts(newSearchProducts);
+
+    if (e.keyCode === 13) {
+      $(".suggestion").fadeOut();
+      emptyProducts();
+      renderProducts(newSearchProducts);
+    } else {
+      if (!$(this).val()) {
+        $(".suggestion").fadeOut();
+      } else {
+        $(".suggestion").fadeIn();
+        $(".suggestion").empty();
+        newSearchProducts.map(function (item) {
+          $(`<li>${item.title}</li>`).appendTo(".suggestion");
+        });
+      }
+    }
+  });
+
+  $("body").on("click", ".suggestion li", function () {
+    const text = $(this).text();
+    $("input.search").val(text);
+    $(".suggestion").fadeOut();
   });
 
   $("button.add").click(function (e) {
@@ -51,6 +73,21 @@ $(function () {
     e.preventDefault();
     emptyProducts();
     renderProducts(filterProducts(products, $(this).val()));
+  });
+
+  $(".open-modal").click(function (e) {
+    e.preventDefault();
+    $(".modal").fadeIn();
+  });
+
+  $(".close, .modal").click(function (e) {
+    e.preventDefault();
+    $(".modal").fadeOut();
+  });
+
+  $(".modal-content").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
   });
 });
 

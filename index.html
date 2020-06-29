@@ -26,7 +26,10 @@
     <div class="actions">
       <div class="container a-center flex j-between">
         <button class="add">Add new</button>
-        <input type="text" class="search" />
+        <div class="input-group">
+          <input type="text" class="search" />
+          <ul class="suggestion"></ul>
+        </div>
         <select name="" id="filter">
           <option value="">---</option>
           <option value="greaterthan5">> $5</option>
@@ -38,6 +41,22 @@
     <div class="products">
       <div class="container">
         <div class="row list"></div>
+      </div>
+    </div>
+    <button class="open-modal">Open Modal</button>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close">x</span>
+        <div class="modal-header">
+          <h2>Simple Modal</h2>
+        </div>
+        <div class="modal-body">
+          <p>Modal mesage can go here</p>
+        </div>
+        <div class="modal-actions">
+          <button class="action">Action</button>
+          <button class="close">Close</button>
+        </div>
       </div>
     </div>
   </body>

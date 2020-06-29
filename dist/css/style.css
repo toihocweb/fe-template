@@ -73,6 +73,27 @@ img {
 	border: 1px solid #30c39e;
 }
 
+.actions .input-group {
+	position: relative;
+}
+
+.actions .input-group ul {
+	position: absolute;
+	width: 100%;
+	background: white;
+	box-shadow: 1px 1px 3px -1px #333;
+}
+
+.actions .input-group ul li {
+	padding: 8px;
+	transition: all .3s;
+}
+
+.actions .input-group ul li:hover {
+	color: white;
+	background: #30c39e;
+}
+
 form {
 	width: 500px;
 }
@@ -81,6 +102,62 @@ form input {
 	margin-bottom: 20px;
 	padding: 8px;
 	border: 1px solid #30c39e;
+}
+
+.open-modal {
+	padding: 10px;
+	cursor: pointer;
+	border: 1px solid #30c39e;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	width: 100%;
+	height: 100vh;
+	background: rgba(51, 51, 51, .5);
+}
+
+.modal-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	padding: 15px;
+	transform: translate(-50%, -50%);
+	border-radius: 4px;
+	background: white;
+}
+
+.modal-header {
+	padding: 20px 0;
+}
+
+.modal-actions {
+	display: flex;
+	margin-top: 20px;
+	justify-content: flex-end;
+}
+
+.modal-actions button.close {
+	margin-left: 20px;
+	padding: 10px;
+	color: white;
+	border-radius: 3px;
+	background: #9b59b6;
+}
+
+.modal-actions button.action {
+	color: #9b59b6;
+}
+
+.modal span.close {
+	font-size: 20px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
 }
 
 @media (min-width: 320px) {
