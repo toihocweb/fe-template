@@ -4,18 +4,18 @@
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-}
-
-ul {
+ul,
+ol {
   list-style: none;
 }
 
-input,
+a {
+  // text-decoration: underline; //default cua the a
+  text-decoration: none;
+}
+
 button,
-textarea {
+input {
   outline: none;
   border: none;
-  background: none;
 }

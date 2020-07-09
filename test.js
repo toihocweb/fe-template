@@ -1,36 +1,32 @@
-// 2 types nhu sau:
-// ==> primitive type: string , number , boolean, null , undefine, symbol...
-// ==> reference type : object, array , function => dia chi
+// destructuring trong js
 
-// lam cach nao de copy 1 array hoac object
-// let a = [1, 2, 3];
-
-// // let b = Array.from(a);
-// // spread operator ...
-
-// let b = [10, 11, 12, 13, ...a];
-
-// a.push(4);
-
-// console.log("a: ", a);
-// console.log("b: ", b);
-
-// rest operator vs spread operator
-
-// function add(a, b, c, ...rest) {
-//   console.log(rest);
-//   return a + b + c;
-// }
-
-// es5
-
-//function es6 (arrow function)
-
-const add = (a, b, c, ...rest) => {
-  console.log(rest);
-  return a + b + c;
+const user = {
+  name: "Ken",
+  age: 19,
+  address: "97 man thien",
+  gender: "female",
 };
 
-const numbers = [1, 2];
+// console.log(c);
 
-console.log(add(...numbers));
+// destructure an object
+// tao bien moi, de luu value cua tung key trong object
+
+// const { name, age, address, gender } = user;
+
+// console.log(name);
+// console.log(age);
+// console.log(address);
+// console.log(gender);
+
+const props = {
+  name: "user 1",
+  uid: 1,
+  code: 20,
+};
+
+const number = [1, 2, 3, 4];
+
+const [a, b, ...rest] = number;
+
+console.log(rest);

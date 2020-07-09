@@ -1,112 +1,54 @@
 @import "reset";
-@import "variable";
-@import "flex";
-@import "grid";
-@import "media";
+@import 'shotpic';
 
-.container {
-  max-width: 1120px;
-  margin: auto;
-}
+  // .green {
+  //   background: yellowgreen;
+  //   width: 200px;
+  //   height: 200px;
+  //   // tach layer  .green
+  //   position: relative;
+  //   top: 500px;
+  //   // left:
+  //   left: 200px;
+  //   // bottom:
+  // }
+  // .yellow {
+  //   background: yellow;
+  //   width:80px;
+  //   height:80px;
+  //   // xem pt parents, thang nao co position, thi se theo thang do 
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  // }
+  // .black {
+  //   width: 30px;
+  //   height: 30px;
+  //   background: black;
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0 100%, 0 0);
 
-img {
-  max-width: 100%;
-}
+  // }
+  // h1 {
+  //   height: 800px;
+  // }
 
-.actions {
-  margin-bottom: 20px;
-  padding: 20px 0px;
-  box-shadow: 0px 2px 3px -2px #333;
-  button.add {
-    padding: 8px 15px;
-    border-radius: 2px;
-    background: #30c39e;
-    color: white;
-  }
-  input.search {
-    padding: 8px 16px;
-    border: 1px solid #30c39e;
-  }
-  .input-group {
-    position: relative;
-    ul {
-      position: absolute;
-      background: white;
-      width: 100%;
-      box-shadow: 1px 1px 3px -1px #333;
-      li {
-        padding: 8px;
-        transition: all 0.3s;
-        &:hover {
-          color: white;
-          background: #30c39e;
-        }
-      }
-    }
-  }
-}
+  // a.totop {
+  //   position: fixed;
+  //   right: 100px;
+  //   bottom: 100px;
+  //   width: 80px;
+  //   height: 80px;
+  //   background: #ffa22d;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   i {
+  //     font-size: 50px;
+  //   }
+  // }
 
-.products {
-}
-
-form {
-  width: 500px;
-  input {
-    margin-bottom: 20px;
-    padding: 8px;
-    border: 1px solid #30c39e;
-  }
-}
-
-.open-modal {
-  border: 1px solid #30c39e;
-  padding: 10px;
-  cursor: pointer;
-}
-.modal {
-  background: rgba(#333, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  display: none;
-  &-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    border-radius: 4px;
-    padding: 15px;
-    width: 500px;
-  }
-  &-header {
-    padding: 20px 0px;
-  }
-  &-body {
-  }
-  &-actions {
-    margin-top: 20px;
-    display: flex;
-    justify-content: flex-end;
-    button {
-      &.close {
-        background: #9b59b6;
-        color: white;
-        padding: 10px;
-        border-radius: 3px;
-        margin-left: 20px;
-      }
-      &.action {
-        color: #9b59b6;
-      }
-    }
-  }
-  span.close {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: 20px;
-  }
-}
+  // quay
+  // transform: rotate(45deg)
