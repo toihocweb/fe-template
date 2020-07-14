@@ -5,3 +5,94 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 10px 0px;
+  box-shadow: 0.33333rem 0 1.33333rem rgba(87, 87, 87, 0.1);
+  .container {
+    .logo {
+      a {
+        color: $purple;
+        font-size: 30px;
+        text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
+        font-weight: 600;
+      }
+    }
+    nav {
+      .fas.fa-angle-down {
+      }
+      a {
+        color: $black;
+        font-size: 15px;
+      }
+      > ul {
+        > li {
+          margin-left: 20px;
+          &:first-child {
+            margin-left: 0;
+          }
+          > a {
+            &.active {
+              color: $green;
+            }
+          }
+          &:hover {
+            > ul.dropdown {
+              display: block;
+            }
+          }
+          > ul.dropdown {
+            display: none;
+            padding: 20px;
+            position: absolute;
+            background: $black;
+            border-radius: 3px;
+            > li {
+              padding: 5px 0px;
+            }
+            a {
+              display: block;
+              color: white;
+              transition: all 0.4s ease-out;
+              &:hover {
+                color: $green;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .header-search {
+      .input-group {
+        input {
+          background: #f7f7f7;
+          padding: 12px 15px;
+          font-size: 13px;
+        }
+        .search {
+          color: white;
+          background: $green;
+          width: 42px;
+          height: 42px;
+          border-radius: 3px;
+        }
+      }
+      .cloud-download {
+        margin-left: 20px;
+        width: 42px;
+        height: 42px;
+        background: $purple;
+        border-radius: 3px;
+        i {
+          color: white;
+        }
+      }
+    }
+  }
+}
