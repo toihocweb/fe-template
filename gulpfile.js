@@ -53,9 +53,7 @@ gulp.task("js", function () {
     .pipe(uglify())
     .pipe(gulp.dest("dist/js"));
 });
-gulp.task("html", function () {
-  return gulp.src(["*.html"]).pipe(gulp.dest("dist/"));
-});
+
 gulp.task("serve", function () {
   // Serve files from the root of this project
   browserSync.init({
@@ -67,5 +65,5 @@ gulp.task("serve", function () {
   gulp.watch("src/js/**/*.js", gulp.series("js")).on("change", reload);
   gulp.watch("src/scss/**/*.scss", gulp.series("scss")).on("change", reload);
   gulp.watch("src/img/*", gulp.series("image")).on("change", reload);
-  gulp.watch("*.html", gulp.series("html")).on("change", reload);
+  gulp.watch("*.html").on("change", reload);
 });
