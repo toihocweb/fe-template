@@ -9,12 +9,11 @@ const cssComb = require("gulp-csscomb");
 const cmq = require("gulp-merge-media-queries");
 const cleanCss = require("gulp-clean-css");
 const uglify = require("gulp-uglify");
-  browserSync = require("browser-sync").create(),
-  reload = browserSync.reload;
+(browserSync = require("browser-sync").create()), (reload = browserSync.reload);
 
 const imagemin = require("gulp-imagemin");
 
-gulp.task("scss", function() {
+gulp.task("scss", function () {
   return gulp
     .src(["src/scss/**/*.scss"])
     .pipe(sass())
@@ -24,64 +23,48 @@ gulp.task("scss", function() {
     .pipe(gulp.dest("dist/css"))
     .pipe(
       rename({
-        suffix: ".min"
+        suffix: ".min",
       })
     )
     .pipe(cleanCss())
     .pipe(gulp.dest("dist/css"));
 });
 
-
-gulp.task("image", function() {
-  gulp
-    .src("src/img/*")
-    .pipe(imagemin())
-    .pipe(gulp.dest("dist/img"));
+gulp.task("image", function () {
+  return gulp.src("src/img/*").pipe(imagemin()).pipe(gulp.dest("dist/img"));
 });
 
-gulp.task("js", function() {
+gulp.task("js", function () {
   return gulp
     .src(["src/js/**/*.js"])
     .pipe(
       plumber({
-        handleError: function(err) {
+        handleError: function (err) {
           console.log(err);
           this.emit("end");
-        }
+        },
       })
     )
     .pipe(gulp.dest("dist/js"))
     .pipe(
       rename({
-        suffix: ".min"
+        suffix: ".min",
       })
     )
     .pipe(uglify())
     .pipe(gulp.dest("dist/js"));
 });
-gulp.task("html", function() {
-  gulp
-    .src(["*.html"])
-    .pipe(
-      plumber({
-        handleError: function(err) {
-          console.log(err);
-          this.emit("end");
-        }
-      })
-    )
-    .pipe(gulp.dest("."));
-});
-gulp.task("serve", function() {
+
+gulp.task("serve", function () {
   // Serve files from the root of this project
   browserSync.init({
     server: {
-      baseDir: "."
-    }
+      baseDir: ".",
+    },
   });
 
   gulp.watch("src/js/**/*.js", gulp.series("js")).on("change", reload);
   gulp.watch("src/scss/**/*.scss", gulp.series("scss")).on("change", reload);
   gulp.watch("src/img/*", gulp.series("image")).on("change", reload);
-  gulp.watch("*.html", gulp.series("html")).on("change", reload);
+  gulp.watch("*.html").on("change", reload);
 });
