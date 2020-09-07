@@ -36,14 +36,6 @@ gulp.task("image", function () {
 gulp.task("js", function () {
   return gulp
     .src(["src/js/**/*.js"])
-    .pipe(
-      plumber({
-        handleError: function (err) {
-          console.log(err);
-          this.emit("end");
-        },
-      })
-    )
     .pipe(gulp.dest("dist/js"))
     .pipe(
       rename({
