@@ -31,11 +31,7 @@ gulp.task("scss", function () {
 });
 
 gulp.task("image", function () {
-<<<<<<< HEAD
   return gulp.src("src/img/*").pipe(imagemin()).pipe(gulp.dest("dist/img"));
-=======
-  gulp.src("src/img/*").pipe(imagemin()).pipe(gulp.dest("dist/img"));
->>>>>>> 899351cf38f25bdd54ad5c82b4b274fed57f1112
 });
 
 gulp.task("js", function () {
