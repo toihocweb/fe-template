@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <link rel="stylesheet" href="dist/css/style.min.css" />
-    <title>Not Found</title>
-  </head>
-  <body class="body">
-    <img src="dist/img/404.PNG" alt="" />
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>FE Checker</title>
+</head>
+<body>
+    <form id="form">
+        <label for="">
+            <input placeholder="name" autocomplete="off" class="name" type="text" name="name">
+            <span></span>
+        </label>
+        <label for="">
+            <input placeholder="link" autocomplete="off" class="link" type="text" name="link">
+            <span></span>
+        </label>
+        <button id="submit">Submit</button>
+    </form>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="main.js"></script>
 </html>
