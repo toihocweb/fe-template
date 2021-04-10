@@ -18,14 +18,6 @@ what i use..
 > and work with whatever tools you may have at your command,
 > and better tools will be found as you go along.
 
-### Installation
-
-Install gulp-cli first (ignore it if you're already)
-
-```sh
-$ npm i -g gulp-cli
-```
-
 Install the dependencies and devDependencies and start the server.
 
 ```sh
