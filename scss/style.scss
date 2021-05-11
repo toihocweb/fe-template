@@ -1,87 +1,101 @@
-img {
-    max-width: 100%;
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ccc;
+  font-family: "Roboto", sans-serif;
 }
 
-.list {
+input,
+button {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+$primary-color: #2a9d8f;
+
+.flex {
+  display: flex;
+}
+
+.todo-wrapper {
+  width: 500px;
+  padding: 20px;
+  background: white;
+  position: relative;
+  border-radius: 5px;
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    background: red;
+    width: 50%;
+    height: 20px;
+    background: #777;
+    box-shadow: 0 15px 10px #777;
+    z-index: -1;
+  }
+  &:after {
+    right: 0;
+    transform: rotate(3deg);
+    right: 5px;
+  }
+  &:before {
+    left: 0;
+    transform: rotate(-3deg);
+    left: 5px;
+  }
+  form {
     display: flex;
-    flex-wrap: wrap;
-    .item {
-        overflow: hidden;
-        width: 400px;
-        position: relative;
-        height: 300px;
-        img {
-            height: 100%;
-        }
-        &.effect1 {
-            &:hover {
-                .content {
-                    opacity: 1;
-                }
-            }
-            .content {
-                opacity: 0;// do trong suot
-                height: 100%;
-                top: 0;
-                left: 0;
-            }
-        }
-        &.effect2 {
-            &:hover {
-                .content {
-                    transform: translateY(-100%);
-                }
-            }
-            .content {
-                top: 100%;
-                left: 0;
-                padding: 20px 0px;
-            }
-         }
-         &.effect3 {
-            &:hover {
-                .content {
-                    transform: translateY(-100%);
-                }
-                img {
-                    transform: translateY(-20px);
-                }
-            }
-            .content {
-                top: 100%;
-                left: 0;
-                padding: 20px 0px;
-            }
-         }
-         &.effect4 {
-            &:hover {
-                .content {
-                    opacity: 1;
-                }
-                img {
-                    transform: scale(1.2);
-                }
-            }
-            .content {
-                top: 0;
-                left: 0;
-                height: 100%;
-                opacity: 0;
-            }
-         }
-        .content {
-            width: 100%;
-            transition: all 0.5s;
-            color: white;
-            position: absolute;
-            // chi su dung rgba trong scss
-            background: rgba(#333, 0.5); 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        img {
-            transition: all 0.5s;
-        }
+    flex-direction: column;
+    text-align: center;
+    h2 {
+      margin-bottom: 20px;
     }
-} 
+    .todo-input {
+      padding: 8px 10px;
+      font-size: 20px;
+      border: 1px solid $primary-color;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      flex: 1;
+      border-right: none;
+    }
+    .btn-add {
+      background: $primary-color;
+      color: white;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      padding: 0px 20px;
+      cursor: pointer;
+    }
+  }
+
+  ul.todo-list {
+    margin-top: 20px;
+    li {
+      padding: 8px 0px;
+      border-bottom: 1px solid $primary-color;
+      display: flex;
+      align-items: center;
+      transition: all 0.4s;
+
+      #check {
+        margin-right: 4px;
+      }
+      &.done {
+        text-decoration: line-through;
+        color: #777;
+      }
+      #btn-delete {
+        padding: 5px;
+        color: #e63946;
+        cursor: pointer;
+        margin-left: auto;
+      }
+    }
+  }
+}
