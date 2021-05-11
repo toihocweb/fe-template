@@ -1,4 +1,87 @@
-h1 {
-  color: rgb(202, 195, 195);
-  background-color: yellow;
+img {
+    max-width: 100%;
 }
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    .item {
+        overflow: hidden;
+        width: 400px;
+        position: relative;
+        height: 300px;
+        img {
+            height: 100%;
+        }
+        &.effect1 {
+            &:hover {
+                .content {
+                    opacity: 1;
+                }
+            }
+            .content {
+                opacity: 0;// do trong suot
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+        }
+        &.effect2 {
+            &:hover {
+                .content {
+                    transform: translateY(-100%);
+                }
+            }
+            .content {
+                top: 100%;
+                left: 0;
+                padding: 20px 0px;
+            }
+         }
+         &.effect3 {
+            &:hover {
+                .content {
+                    transform: translateY(-100%);
+                }
+                img {
+                    transform: translateY(-20px);
+                }
+            }
+            .content {
+                top: 100%;
+                left: 0;
+                padding: 20px 0px;
+            }
+         }
+         &.effect4 {
+            &:hover {
+                .content {
+                    opacity: 1;
+                }
+                img {
+                    transform: scale(1.2);
+                }
+            }
+            .content {
+                top: 0;
+                left: 0;
+                height: 100%;
+                opacity: 0;
+            }
+         }
+        .content {
+            width: 100%;
+            transition: all 0.5s;
+            color: white;
+            position: absolute;
+            // chi su dung rgba trong scss
+            background: rgba(#333, 0.5); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            transition: all 0.5s;
+        }
+    }
+} 

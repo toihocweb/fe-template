@@ -1,0 +1,92 @@
+@import "media";
+
+$cols: 12;
+$gutter: 16px; // khoảng giữa 2 item trong ht lưới
+
+
+.row {
+  //   @for - from 1 to 12:  --> 1 den 11
+  //   @for - from 1 through 12:  --> 1 den 12
+  display: flex;
+  flex-wrap: wrap;
+  margin: -$gutter / 2;
+  overflow: hidden;
+
+  @for $i from 1 through $cols {
+    @include xs() {
+      .col-xs-#{$i} {
+        padding: $gutter / 2;
+        width: (100% / $cols) * $i;
+      }
+    }
+  }
+
+  @for $i from 1 through $cols {
+    @include sm() {
+      .col-sm-#{$i} {
+        padding: $gutter / 2;
+        width: (100% / $cols) * $i;
+      }
+    }
+  }
+
+  @for $i from 1 through $cols {
+    @include md() {
+      .col-md-#{$i} {
+        padding: $gutter / 2;
+        width: (100% / $cols) * $i;
+      }
+    }
+  }
+
+  @for $i from 1 through $cols {
+    @include lg() {
+      .col-lg-#{$i} {
+        padding: $gutter / 2;
+        width: (100% / $cols) * $i;
+      }
+    }
+  }
+
+  @for $i from 1 through $cols {
+    @include xl() {
+      .col-xl-#{$i} {
+        padding: $gutter / 2;
+        width: (100% / $cols) * $i;
+      }
+    }
+  }
+
+  //
+  //  col-xs-12 col-sm-3 col-md-6 col-lg-4
+
+  // .col-xs-1
+  // .col-xs-2
+  // ...
+  // .col-xs-12
+  //
+
+  // .col-sm-1
+  // .col-sm-2
+  // ...
+  // .col-sm-12
+  //
+
+  // .col-md-1
+  // .col-md-2
+  // ...
+  // .col-md-12
+  //
+
+  // .col-lg-1
+  // .col-lg-2
+  // ...
+  // .col-lg-12
+  //
+
+  // .col-xl-1
+  // .col-xl-2
+  // ...
+  // .col-xl-12
+  //
+}
