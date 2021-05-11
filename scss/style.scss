@@ -63,6 +63,9 @@ $primary-color: #2a9d8f;
       border-bottom-left-radius: 4px;
       flex: 1;
       border-right: none;
+      &.error {
+        border-color: #e63946;
+      }
     }
     .btn-add {
       background: $primary-color;

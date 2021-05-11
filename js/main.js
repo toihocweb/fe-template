@@ -36,9 +36,12 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   const inputValue = input.value;
   if (!inputValue) {
-    input.style.borderColor = "#e63946";
+    input.classList.add("error");
     return;
   }
+
+  //
+  input.classList.remove("error");
 
   // add new todo
   // id sẽ là random 5 kí tự bất kì
